@@ -371,6 +371,16 @@ pub mod space {
     pub const XXL: f32 = 32.0;
 }
 
+/// Logical widths at which Settings can keep its rail, control rows and label columns.
+pub mod breakpoint {
+    pub const SETTINGS_RAIL: f32 = 720.0;
+    pub const SETTINGS_CONTROLS: f32 = 400.0;
+    pub const SETTINGS_LABELS: f32 = 560.0;
+}
+
+/// Extra horizontal room reserved beside the scrolling Settings content.
+pub const SETTINGS_CONTENT_INSET: f32 = 14.0;
+
 /// Icon sizes.
 pub mod icon {
     pub const XS: f32 = 12.0;
@@ -520,6 +530,9 @@ const SCROLL_THUMB_AT_REST: f32 = 0.5;
 /// How far one notch of the mouse wheel scrolls, in points. egui's own step is 40, which takes
 /// two or three turns for what a browser scrolls in one; it still eases to the new place.
 pub const WHEEL_STEP: f32 = 100.0;
+
+/// The default Project prompt viewport cap in a short pane, in points.
+pub const PROMPT_VIEWPORT_FLOOR: f32 = 208.0;
 
 /// Apply a theme: its colours, and the one set of text sizes and spacing both modes use.
 pub fn apply(ctx: &egui::Context, kind: ThemeKind) {
